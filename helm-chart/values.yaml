@@ -112,3 +112,22 @@ customerServiceGreen:
         externalPort: 80
         internalPort: 8080
         name: customer-service-green
+orderService:
+    container:
+        name: order-service
+    image:
+        pullPolicy: Always
+        repository: robjahn/keptn-orders-order-service
+        tag: 1
+    replicaCount: 1
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 100m
+            memory: 128Mi
+    service:
+        externalPort: 80
+        internalPort: 8080
+        name: order-service
