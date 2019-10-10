@@ -188,3 +188,41 @@ catalogService:
         externalPort: 80
         internalPort: 8080
         name: catalog-service
+catalogServiceBlue:
+    container:
+        name: catalog-service
+    image:
+        pullPolicy: Always
+        repository: robjahn/keptn-orders-catalog-service
+        tag: 1
+    replicaCount: 1
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 100m
+            memory: 128Mi
+    service:
+        externalPort: 80
+        internalPort: 8080
+        name: catalog-service-blue
+catalogServiceGreen:
+    container:
+        name: catalog-service
+    image:
+        pullPolicy: Always
+        repository: robjahn/keptn-orders-catalog-service
+        tag: 1
+    replicaCount: 1
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 100m
+            memory: 128Mi
+    service:
+        externalPort: 80
+        internalPort: 8080
+        name: catalog-service-green
