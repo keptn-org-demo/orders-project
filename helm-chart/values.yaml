@@ -17,3 +17,41 @@ frontEnd:
         externalPort: 80
         internalPort: 8080
         name: front-end
+frontEndBlue:
+    container:
+        name: front-end
+    image:
+        pullPolicy: Always
+        repository: robjahn/keptn-orders-front-end
+        tag: 1
+    replicaCount: 1
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 100m
+            memory: 128Mi
+    service:
+        externalPort: 80
+        internalPort: 8080
+        name: front-end-blue
+frontEndGreen:
+    container:
+        name: front-end
+    image:
+        pullPolicy: Always
+        repository: robjahn/keptn-orders-front-end
+        tag: 1
+    replicaCount: 1
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 100m
+            memory: 128Mi
+    service:
+        externalPort: 80
+        internalPort: 8080
+        name: front-end-green
