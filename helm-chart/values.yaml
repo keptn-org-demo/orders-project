@@ -55,3 +55,22 @@ frontEndGreen:
         externalPort: 80
         internalPort: 8080
         name: front-end-green
+customerService:
+    container:
+        name: customer-service
+    image:
+        pullPolicy: Always
+        repository: robjahn/keptn-orders-customer-service
+        tag: 1
+    replicaCount: 1
+    resources:
+        limits:
+            cpu: 100m
+            memory: 128Mi
+        requests:
+            cpu: 100m
+            memory: 128Mi
+    service:
+        externalPort: 80
+        internalPort: 8080
+        name: customer-service
